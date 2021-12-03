@@ -5,7 +5,5 @@ public class Computer {
     private String marka;
     private String color;
     private HardDisk hardDisk;
-    private Ram ram;
-    private UsbPort[] ramList;
     private Klavishi klavishi;
 }

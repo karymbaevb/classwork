@@ -1,21 +1,21 @@
 package kg.itacademy.fv21.toString;
 
 public class Klavishi {
-    private int[] arrayRaskladok;
+    private Raskladka[] arrayRaskladok;
     private boolean hasPodsvetka;
     private boolean hisRightDigits;
 
-    public Klavishi(int[] arrayRaskladok, boolean hasPodsvetka, boolean hisRightDigits) {
+    public Klavishi(Raskladka[] arrayRaskladok, boolean hasPodsvetka, boolean hisRightDigits) {
         this.arrayRaskladok = arrayRaskladok;
         this.hasPodsvetka = hasPodsvetka;
         this.hisRightDigits = hisRightDigits;
     }
 
-    public int[] getArrayRaskladok() {
+    public Raskladka[] getArrayRaskladok() {
         return arrayRaskladok;
     }
 
-    public void setArrayRaskladok(int[] arrayRaskladok) {
+    public void setArrayRaskladok(Raskladka[] arrayRaskladok) {
         this.arrayRaskladok = arrayRaskladok;
     }
 
