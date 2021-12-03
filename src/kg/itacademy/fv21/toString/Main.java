@@ -1,8 +1,7 @@
-package kg.itacademy.fv21.homework.hm2;
+package kg.itacademy.fv21.toString;
 
 public class Main {
     public static void main(String[] args) {
-
+        
     }
-
 }
