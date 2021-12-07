@@ -1,15 +1,14 @@
 package kg.itacademy.fv21.nasledovanie;
 
 public class Bread {
-    /**
-     * Замените слово public на private,
-     * для того чтобы применить принцип инкапсуляции,
-     * который гласит, что мы должны ограничить доступ
-     * к внутренней реализации объекта.
-     */
-    public double weight;
-    public double price;
-    public String producerCompany;
+
+    private double weight;
+    private double price;
+    private String producerCompany;
+
+    public Bread(double w){
+        this.weight = w;
+    }
 
     public void bake() {
         System.out.println("Хлеб готов!");
