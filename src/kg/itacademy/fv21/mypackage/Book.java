@@ -16,7 +16,8 @@ public class Book {
      * @param author
      * @param title
      */
-    public Book(String author, String title, int pageCount, String giftedBy, String pressmark, boolean needsRepair) {
+    public Book(String author, String title, int pageCount,
+                String giftedBy, String pressmark, boolean needsRepair) {
         this.author = author;
         this.title = title;
         this.pageCount = pageCount;

@@ -13,5 +13,9 @@ public class Main {
         book.author = "Абракадабра";
         book.pageCount = 10000000;
         book.print();
+        if(book.needsRepair){
+            System.out.println("Нужен ремонт");
+        }
+
     }
 }
