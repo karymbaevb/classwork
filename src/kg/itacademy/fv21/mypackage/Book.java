@@ -16,6 +16,9 @@ public class Book {
      * @param author
      * @param title
      */
+    public Book(){
+
+    }
     public Book(String author, String title, int pageCount,
                 String giftedBy, String pressmark, boolean needsRepair) {
         this.author = author;
