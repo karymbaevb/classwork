@@ -1,31 +1,34 @@
 package kg.itacademy.fv21.bread;
 
-/**
- * Посмотрите на модификаторы класса
- * и исправьте там где это неправильно
- */
 public class Bread {
-    public int cost; //цена
-    int weight; //вес
+    private int cost; //цена
+    private int weight; //вес
 
-    private Bread(int cost, int weight) {
+    public Bread(int cost, int weight) {
         this.cost = cost;
         this.weight = weight;
     }
 
-    private int getCost() {
+    public Bread() {
+    }
+
+    public int getCost() {
         return cost;
     }
 
-    void setCost(int cost) {
+    public void setCost(int cost) {
         this.cost = cost;
     }
 
-    protected int getWeight() {
+    public int getWeight() {
         return weight;
     }
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public void bake(){
+        System.out.println("Испекли хлеб весом " + weight);
     }
 }
