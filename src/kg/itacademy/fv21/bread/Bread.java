@@ -31,4 +31,12 @@ public class Bread {
     public void bake(){
         System.out.println("Испекли хлеб весом " + weight);
     }
+
+    @Override
+    public String toString() {
+        return "Bread{" +
+                "cost=" + cost +
+                ", weight=" + weight +
+                '}';
+    }
 }
