@@ -1,25 +1,10 @@
 package kg.itacademy.fv21.modstatic.bread;
 
 public class Bread {
-    private int cost; //цена
+    public static int cost; //цена
     private int weight; //вес
-    public int count; //Количество созданных объектов
-
-    public Bread(int cost, int weight) {
-        this.cost = cost;
-        this.weight = weight;
-        count++;
-    }
 
     public Bread() {
-    }
-
-    public int getCost() {
-        return cost;
-    }
-
-    public void setCost(int cost) {
-        this.cost = cost;
     }
 
     public int getWeight() {
@@ -28,10 +13,6 @@ public class Bread {
 
     public void setWeight(int weight) {
         this.weight = weight;
-    }
-
-    public int getCount() {
-        return count;
     }
 
     public void bake(){
@@ -43,7 +24,6 @@ public class Bread {
         return "Bread{" +
                 "cost=" + cost +
                 ", weight=" + weight +
-                ", count=" + count +
                 '}';
     }
 }
