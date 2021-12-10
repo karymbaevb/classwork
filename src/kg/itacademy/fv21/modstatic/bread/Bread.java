@@ -1,7 +1,7 @@
 package kg.itacademy.fv21.modstatic.bread;
 
 public class Bread {
-    public static int cost; //цена
+    public int cost; //цена
     private int weight; //вес
 
     public Bread() {
