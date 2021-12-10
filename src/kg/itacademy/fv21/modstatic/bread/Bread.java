@@ -3,7 +3,7 @@ package kg.itacademy.fv21.modstatic.bread;
 public class Bread {
     private int cost; //цена
     private int weight; //вес
-    public static int count;
+    private int count; //Количество созданных объектов
 
     public Bread(int cost, int weight) {
         this.cost = cost;
@@ -30,6 +30,10 @@ public class Bread {
         this.weight = weight;
     }
 
+    public int getCount() {
+        return count;
+    }
+
     public void bake(){
         System.out.println("Испекли хлеб весом " + weight);
     }
@@ -39,6 +43,7 @@ public class Bread {
         return "Bread{" +
                 "cost=" + cost +
                 ", weight=" + weight +
+                ", cont=" + count +
                 '}';
     }
 }
