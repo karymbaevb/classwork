@@ -1,13 +1,15 @@
 package kg.itacademy.fv21.modfinal;
 
 public class KGTU {
-    public int yearOfConstruction = 1954;
+    public final int YAER_OF_CONSTRUCTION;
+    public final double PI = 3.14;
 
-    public void changeYearOfConstruction(int yearOfConstruction) {
-        this.yearOfConstruction = yearOfConstruction;
-    }
+     public KGTU() {
+         YAER_OF_CONSTRUCTION = 1954;
+        }
 
-    public int getYearOfConstruction() {
-        return this.yearOfConstruction;
+
+    public KGTU(int a) {
+         this.YAER_OF_CONSTRUCTION = 1954;
     }
 }
