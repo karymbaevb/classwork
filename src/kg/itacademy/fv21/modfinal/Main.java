@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
         KGTU university = new KGTU();
-        university.changeName("Manas");
-        System.out.println(university.getName());
+        university.changeYearOfConstruction(2021);
+        System.out.println(university.getYearOfConstruction());
     }
 }
 

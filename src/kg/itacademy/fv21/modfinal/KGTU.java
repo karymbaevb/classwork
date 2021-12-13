@@ -1,13 +1,13 @@
 package kg.itacademy.fv21.modfinal;
 
 public class KGTU {
-    public String name = "KGTU";
+    public int yearOfConstruction = 1954;
 
-    public void changeName(String name) {
-        this.name = name;
+    public void changeYearOfConstruction(int yearOfConstruction) {
+        this.yearOfConstruction = yearOfConstruction;
     }
 
-    public String getName() {
-        return this.name;
+    public int getYearOfConstruction() {
+        return this.yearOfConstruction;
     }
 }
