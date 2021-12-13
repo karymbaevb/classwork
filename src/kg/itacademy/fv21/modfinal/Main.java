@@ -3,11 +3,14 @@ package kg.itacademy.fv21.modfinal;
 public class Main {
 
     public static void main(String[] args) {
-        KGTU university = new KGTU();
-        university.changeYearOfConstruction(2021);
-        System.out.println(university.getYearOfConstruction());
+
     }
 }
+//    public static void main(String[] args) {
+//        KGTU university = new KGTU();
+//        university.changeYearOfConstruction(2021);
+//        System.out.println(university.getYearOfConstruction());
+//    }
 
 //final class Test {
 //}
