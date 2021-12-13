@@ -3,7 +3,10 @@ package kg.itacademy.fv21.modfinal;
 public class Main {
 
     public static void main(String[] args) {
-
+        double PI = 3.14; // операция инициализации внутрь памяти
+        System.out.println(PI); //операция чтения из памяти
+        PI = 10; // операция переприсвоения
+        System.out.println(PI); //операция чтения из памяти
     }
 }
 //    public static void main(String[] args) {
