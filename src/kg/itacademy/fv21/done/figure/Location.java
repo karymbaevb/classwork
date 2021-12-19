@@ -1,4 +1,4 @@
-package kg.itacademy.fv21.modfinal.figure;
+package kg.itacademy.fv21.done.figure;
 
 public class Location {
     private int x;

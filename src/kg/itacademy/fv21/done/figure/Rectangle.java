@@ -1,4 +1,4 @@
-package kg.itacademy.fv21.modfinal.figure;
+package kg.itacademy.fv21.done.figure;
 
 public final class Rectangle extends Figure{
     public static int count = 0;
@@ -8,12 +8,6 @@ public final class Rectangle extends Figure{
     public Rectangle(int side) {
         this.w = side;
         this.h = side;
-        count++;
-    }
-
-    public Rectangle(int sideA, int sideB) {
-        this.w = sideA;
-        this.h = sideB;
         count++;
     }
 
