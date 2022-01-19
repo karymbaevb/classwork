@@ -1,49 +1,55 @@
 package kg.itacademy.fv21;
 
-//В университете имеются Факультеты(художественней, юридический, технический).
-//
-//        В каждом Факультете есть свои Группы:
-//
-//        У факультетов должно быть следующие методы:
-//        1. Добавление новой группы
-//        2. Вывод на консоль всех групп факультета
-//        3. Вывод на консоль всей информации факультета (включая все группы)
-//        4. Поиск по названию группы на факультете
-//        5. Метод для получения количества групп в любом из факультетов
-//        6. Каждый факультет выводит свое название и количество групп при вызове toString()
-//        7. У технического факультета должно быть свойство "наличие компьютера"
-//
-//        Группа имеет идентификатор, название, количество студентов, год поступления.
-
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        int point;
-        Scanner scanner = new Scanner(System.in);
-        do {
+//        Figure f = new Figure();
+//        f.calculateP();
 
-            System.out.println("-------------Добавить-------------------");
-            System.out.println("1. Добавить в худ факультет");
-            System.out.println("2. Добавить в тех факультет");
-            System.out.println("3. Добавить в юр факультет");
-            System.out.println("-------------Показать-------------------");
-            System.out.println("4. Показать группы худ факультета");
-            System.out.println("5. Показать группы тех факультета");
-            System.out.println("6. Показать группы юр факультета");
-            System.out.println("--------------------------------------");
-            System.out.println("7. Показать всю информацию худ факультета");
-            System.out.println("8. Показать всю информацию тех факультета");
-            System.out.println("9. Показать всю информацию юр факультета");
-            System.out.println("---------------Поиск по названию группы--------------");
-            System.out.println("10. Поиск в худ факультетом");
-            System.out.println("11. Поиск в тех факультетом");
-            System.out.println("12. Поиск в юр факультетом");
-            point = scanner.nextInt();
+        Triangle tr = new Triangle();
+        tr.calculateP();
+        tr.showInfo();
 
-            switch (point){
+        Rectangle rect = new Rectangle();
+        rect.calculateP();
 
-            }
-        } while (point != 0);
+        Circle circle = new Circle();
+        circle.calculateP();
     }
 }
+abstract class GrandFigure{
+
+}
+
+abstract class Figure extends GrandFigure{
+    private String nameClass = "Figure";
+    public Figure(){}
+    abstract void calculateP();
+
+    void showInfo(){
+        System.out.println(nameClass);
+    }
+}
+
+class Triangle extends Figure{
+    @Override
+    void calculateP(){
+        System.out.println("calculate P Triangle");
+    }
+}
+
+class Rectangle extends Figure{
+    @Override
+    void calculateP(){
+        System.out.println("calculate P Rectangle");
+    }
+}
+
+class Circle extends Figure{
+    @Override
+    void calculateP(){
+        System.out.println("calculate P Circle");
+    }
+}
+
+
+
