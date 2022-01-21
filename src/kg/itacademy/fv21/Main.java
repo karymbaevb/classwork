@@ -2,54 +2,50 @@ package kg.itacademy.fv21;
 
 public class Main {
     public static void main(String[] args) {
-//        Figure f = new Figure();
-//        f.calculateP();
-
-        Triangle tr = new Triangle();
-        tr.calculateP();
-        tr.showInfo();
-
-        Rectangle rect = new Rectangle();
-        rect.calculateP();
-
-        Circle circle = new Circle();
-        circle.calculateP();
+        Writable black = new BlackBoard();
+        black.write();
+//        black.value = 123;
     }
 }
-abstract class GrandFigure{
-
+interface Otherable{
+    public static final int value = 100;
+}
+abstract interface Writable extends Otherable{
+    public abstract void write();
 }
 
-abstract class Figure extends GrandFigure{
-    private String nameClass = "Figure";
-    public Figure(){}
-    abstract void calculateP();
+abstract class AbstractBoard implements Writable{
+    abstract void showInfo();
+}
 
+
+
+class WhiteBoard extends AbstractBoard {
+    Cell cell;
+    @Override
     void showInfo(){
-        System.out.println(nameClass);
+        System.out.println("I m white");
     }
-}
 
-class Triangle extends Figure{
     @Override
-    void calculateP(){
-        System.out.println("calculate P Triangle");
+    public void write() {
+        System.out.println("I write by white marker");
     }
 }
 
-class Rectangle extends Figure{
+class BlackBoard extends AbstractBoard {
+    public String name;
     @Override
-    void calculateP(){
-        System.out.println("calculate P Rectangle");
+    void showInfo(){
+        System.out.println("I m black");
     }
-}
 
-class Circle extends Figure{
     @Override
-    void calculateP(){
-        System.out.println("calculate P Circle");
+    public void write() {
+        System.out.println("Write by black marker");
     }
 }
 
-
-
+class Cell{
+    String name;
+}
