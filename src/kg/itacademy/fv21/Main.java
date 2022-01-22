@@ -2,50 +2,73 @@ package kg.itacademy.fv21;
 
 public class Main {
     public static void main(String[] args) {
-        Writable black = new BlackBoard();
-        black.write();
-//        black.value = 123;
-    }
-}
-interface Otherable{
-    public static final int value = 100;
-}
-abstract interface Writable extends Otherable{
-    public abstract void write();
-}
+        Swimmable[] okeanarium = {new Shark(), new Turtle(), new Duck()};
+//        for (Swimmable element : okeanarium
+//        ) {
+//            element.swim();
+//            Soundable sound = (Soundable)element;
+//            sound.sound();
+//        }
 
-abstract class AbstractBoard implements Writable{
-    abstract void showInfo();
-}
+        Swimmable sharkSwim = okeanarium[0];
+//        Shark shark = (Shark) sharkSwim;
+//        System.out.println(shark.getClass());
 
+        if(sharkSwim instanceof Shark){
+            System.out.println("Shark");
+        }else if(sharkSwim instanceof  Turtle){
+            System.out.println("Turtle");
+        }
 
-
-class WhiteBoard extends AbstractBoard {
-    Cell cell;
-    @Override
-    void showInfo(){
-        System.out.println("I m white");
-    }
-
-    @Override
-    public void write() {
-        System.out.println("I write by white marker");
     }
 }
 
-class BlackBoard extends AbstractBoard {
-    public String name;
+interface Swimmable {
+    void swim();
+}
+
+interface Soundable {
+    void sound();
+}
+
+class Turtle implements Swimmable, Soundable {
+
     @Override
-    void showInfo(){
-        System.out.println("I m black");
+    public void swim() {
+        System.out.println("Turtle swim");
     }
 
     @Override
-    public void write() {
-        System.out.println("Write by black marker");
+    public void sound() {
+        System.out.println("Turtle sound");
+
     }
 }
 
-class Cell{
-    String name;
+class Shark implements Swimmable, Soundable {
+
+    @Override
+    public void swim() {
+        System.out.println("Shark swim");
+    }
+
+    @Override
+    public void sound() {
+        System.out.println("Shark sound");
+
+    }
+}
+
+class Duck implements Swimmable, Soundable {
+
+    @Override
+    public void swim() {
+        System.out.println("Duck swim");
+    }
+
+    @Override
+    public void sound() {
+        System.out.println("Duck sound");
+
+    }
 }
