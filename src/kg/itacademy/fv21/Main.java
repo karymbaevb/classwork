@@ -1,74 +1,61 @@
 package kg.itacademy.fv21;
 
+import kg.itacademy.fv21.aircraft.Aircraft;
+import kg.itacademy.fv21.aircraft.Boing;
+import kg.itacademy.fv21.aircraft.Tu;
+
+/**
+ * Нужно один раз вывести “Hello! I'm learning Java, Java”. Что нужно вставить вместо X, Y, Z чтобы получить соответствующий вывод.
+ */
 public class Main {
     public static void main(String[] args) {
-        Swimmable[] okeanarium = {new Shark(), new Turtle(), new Duck()};
-//        for (Swimmable element : okeanarium
-//        ) {
-//            element.swim();
-//            Soundable sound = (Soundable)element;
-//            sound.sound();
+//        try {
+//            subroutine();
+//        } catch (ArithmeticException ex) {
+//            System.out.println("А я знаю как");
 //        }
+        Cat[] cats = {
+                new Cat("Tom"),
+                null,
+                new Cat("Sam")
+        };
 
-        Swimmable sharkSwim = okeanarium[0];
-//        Shark shark = (Shark) sharkSwim;
-//        System.out.println(shark.getClass());
+        for (int i = 0; i < cats.length + 10; i++) {
+            try {
+                if(cats[i] == null){
+                    throw new CatNotFoundException("Hello world. Cat is lost");
+                }
+                System.out.println(i + " " + cats[i].name);
+            } catch (CatNotFoundException ex) {
+                System.out.println(i + ex.getMessage());
+            } catch (ArrayIndexOutOfBoundsException ex) {
+                System.out.println("Массив закончен");
+                break;
+            } catch (RuntimeException ex) {
+                System.out.println("Так нельзя");
+            }
+            finally {
+                System.out.println(" А я выполнюсь в любом случае");
+            }
+        }
+    }
 
-        if(sharkSwim instanceof Shark){
-            System.out.println("Shark");
-        }else if(sharkSwim instanceof  Turtle){
-            System.out.println("Turtle");
+    static void subroutine() throws ArithmeticException, NullPointerException, IndexOutOfBoundsException {
+
+        try {
+            int d = 0;
+            int a = 10 / d;
+        } catch (Exception ex) {
+            throw ex;
         }
 
     }
 }
 
-interface Swimmable {
-    void swim();
-}
+class Cat {
+    String name;
 
-interface Soundable {
-    void sound();
-}
-
-class Turtle implements Swimmable, Soundable {
-
-    @Override
-    public void swim() {
-        System.out.println("Turtle swim");
-    }
-
-    @Override
-    public void sound() {
-        System.out.println("Turtle sound");
-
-    }
-}
-
-class Shark implements Swimmable, Soundable {
-
-    @Override
-    public void swim() {
-        System.out.println("Shark swim");
-    }
-
-    @Override
-    public void sound() {
-        System.out.println("Shark sound");
-
-    }
-}
-
-class Duck implements Swimmable, Soundable {
-
-    @Override
-    public void swim() {
-        System.out.println("Duck swim");
-    }
-
-    @Override
-    public void sound() {
-        System.out.println("Duck sound");
-
+    public Cat(String name) {
+        this.name = name;
     }
 }
